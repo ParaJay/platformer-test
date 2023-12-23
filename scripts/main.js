@@ -120,6 +120,25 @@ window.addEventListener("keyup", (e) => {
     if(k == "i") {
         console.log(getPlayer().inventory)
     }
+
+	if(k == "x") {
+		dev = !dev
+	}
+
+	if(k == "e") {
+		if(!player) {
+			return
+		}
+		world.entities.forEach(e => {
+			if(!e.equals(player)) {
+				let off = player.direction == "left" ? 2 : -2
+
+				if(player.collides(e, false, off, off) ) {
+					player.attack(e)
+				}
+			}
+		})
+	}
 })
 
 window.addEventListener("keydown", (e) => {

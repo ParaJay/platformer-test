@@ -40,31 +40,13 @@ export class Player extends MovingEntity {
 			this.direction = "right"
 		}
 
-		if(pressed["e"]) {
-			world.entities.forEach(e => {
-				if(!e.equals(this)) {
-					let off = this.direction == "left" ? 2 : -2
-
-					if(this.collides(e, false, off, off) ) {
-						this.attack(e)
-					}
-				}
-			})
-		}
-
 		if(pressed["Shift"]) {
 			if(dev) {
 				this.y += 4
 			}
 		}
 
-		if(pressed["x"]) {
-			setDev(!dev)
-		}
-
 		this.ticksSinceLastAttack++
-
-		// console.log(this.ticksSinceLastAttack)
 	}
 
 	move(direction, amount=2) {
