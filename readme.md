@@ -20,11 +20,19 @@ notable things I wanted to test
 <br>
 `X` - toggles dev mode
 <br>
+`I` - logs the player's inventory to the console
+<br>
 `E` -
 <br> &emsp;&emsp; 
 calls `LivingEntity.damage` damages if `LivingEntity.isDamageable`
 <br> &emsp;&emsp;
 calls `Entity.onInteractedWith` if `Entity.isInteractable`
+
+## Known Issues
+- blob entity will get stuck when reaching the end of its path (after Tree is destroyed) and will constantly switch directions
+
+## Future Plans
+- adding Wind which will affect Swayables sway distance, Fall speed, Jump power and Movement speed
 
 ## Entities
 entities are collidable unless specified otherwise
