@@ -1,5 +1,7 @@
 # platformer-test
 
+https://parajay.github.io/platformer-test/
+
 a simple platformer I made to test certain things
 <br>
 notable things I wanted to test
